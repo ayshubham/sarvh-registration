@@ -9,12 +9,12 @@
   </head>
   <body>
     <div class="main">
-      <div class="secondary">
-        <div class="container">
-          <div class="title">Sarvh Registration</div>
+      <form action="#">
+        <div class="secondary">
+          <div class="container">
+            <div class="title">Seller information</div>
 
-          <div class="content">
-            <form action="#">
+            <div class="content">
               <div class="user-details">
                 <div class="input-box">
                   <span class="details">Full Name</span>
@@ -22,7 +22,12 @@
                 </div>
                 <div class="input-box">
                   <span class="details">Pan Number</span>
-                  <input type="text" placeholder="Your Pan Number" required />
+                  <input
+                    type="text"
+                    placeholder="Your Pan Number"
+                    required
+                    maxlength="10"
+                  />
                 </div>
                 <div class="input-box">
                   <span class="details">Email</span>
@@ -36,14 +41,46 @@
                   <span class="details">Phone Number</span>
                   <input
                     type="text"
-                    placeholder="Business Phone Address"
+                    placeholder="Your Phone Address"
                     required
+                    maxlength="10"
                   />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Your Address</span>
                   <input type="text" placeholder="Your Address" required />
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Your Pincode</span>
+                  <input
+                    type="text"
+                    placeholder="Your Pincode"
+                    required
+                    maxlength="6"
+                  />
+                </div>
+
+                <div
+                  class="input-box"
+                  style="display: flex; flex-direction: row"
+                >
+                  <div>
+                    <span class="details">Upload your adhar card</span>
+
+                    <input type="file" id="file" style="display: none" />
+                    <label for="file" class="btn-7">upload</label>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; flex-direction: column">
+                    <span class="details">Upload your Pan card</span>
+
+                    <input type="file" id="file" style="display: none" />
+                    <label for="file" class="btn-7">upload</label>
+                  </div>
                 </div>
 
                 <!-- <div class="input-box">
@@ -102,33 +139,49 @@
             </div>
           </div> -->
               <div class="button">
-                <input type="submit" value="Next" onclick="" />
+                <input
+                  value="Next"
+                  type="button"
+                  id="btn1"
+                  onclick="next1(event)"
+                />
               </div>
-            </form>
+            </div>
+
+            <!--   here is new one -->
           </div>
 
-          <!--   here is new one -->
-        </div>
+          <div class="container">
+            <div class="title">Shop Information</div>
 
-        <div class="container">
-          <div class="title">Sarvh Registration</div>
-
-          <div class="content">
-            <form action="#">
+            <div class="content">
               <div class="user-details">
                 <div class="input-box">
-                  <span class="details">Full Name-2</span>
-                  <input type="text" placeholder="Enter your name" required />
+                  <span class="details">Shop Name</span>
+                  <input type="text" placeholder="Enter Shop" required />
                 </div>
                 <div class="input-box">
-                  <span class="details">Pan Number</span>
-                  <input type="text" placeholder="Your Pan Number" required />
-                </div>
-                <div class="input-box">
-                  <span class="details">Email</span>
+                  <div style="display: flex; flex-direction: row; gap: 2px">
+                    <span class="details">Company Pan</span>
+                    <div class="tooltip">
+                      ⓘ
+                      <span class="tooltiptext"
+                        >If you are proprietorship then enter your pancard
+                        number</span
+                      >
+                    </div>
+                  </div>
                   <input
                     type="text"
-                    placeholder="Business Email Address"
+                    placeholder="Company Pan Number"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Shop Email</span>
+                  <input
+                    type="text"
+                    placeholder="Shop Email Address"
                     required
                   />
                 </div>
@@ -136,14 +189,25 @@
                   <span class="details">Phone Number</span>
                   <input
                     type="text"
-                    placeholder="Business Phone Address"
+                    placeholder="Shop Phone Number"
                     required
+                    maxlength="10"
                   />
                 </div>
 
                 <div class="input-box">
-                  <span class="details">Your Address</span>
-                  <input type="text" placeholder="Your Address" required />
+                  <span class="details">Shop Address</span>
+                  <input type="text" placeholder="Shop Address" required />
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Shop Pincode</span>
+                  <input
+                    type="text"
+                    placeholder="Shop Address"
+                    required
+                    maxlength="6"
+                  />
                 </div>
 
                 <!-- <div class="input-box">
@@ -204,50 +268,70 @@
               <div class="button">
                 <input
                   value="Next"
-                  id="btn1"
-                  onclick="(event)=>{next1(event)}"
+                  type="button"
+                  id="btn2"
+                  onclick="next2(event)"
                 />
               </div>
-            </form>
+              <div class="button">
+                <input
+                  value="Back"
+                  type="button"
+                  id="btnback"
+                  onclick="next2Back(event)"
+                />
+              </div>
+            </div>
+
+            <!--   here is new one -->
           </div>
 
-          <!--   here is new one -->
-        </div>
+          <div class="container">
+            <div class="title">Bank Account</div>
 
-        <div class="container">
-          <div class="title">Sarvh Registration</div>
-
-          <div class="content">
-            <form action="#">
+            <div class="content">
               <div class="user-details">
                 <div class="input-box">
-                  <span class="details">Full Name-3</span>
-                  <input type="text" placeholder="Enter your name" required />
+                  <span class="details">GSTIN</span>
+                  <input type="text" placeholder="GST NUMBER" required />
                 </div>
                 <div class="input-box">
-                  <span class="details">Pan Number</span>
-                  <input type="text" placeholder="Your Pan Number" required />
+                  <span class="details">Bank Name</span>
+                  <input type="text" placeholder="Bank Name" required />
                 </div>
                 <div class="input-box">
-                  <span class="details">Email</span>
+                  <span class="details">Account Number</span>
                   <input
                     type="text"
-                    placeholder="Business Email Address"
+                    placeholder="Your Account Number"
                     required
                   />
                 </div>
                 <div class="input-box">
-                  <span class="details">Phone Number</span>
-                  <input
-                    type="text"
-                    placeholder="Business Phone Address"
-                    required
-                  />
+                  <span class="details">IFSC</span>
+                  <input type="text" placeholder="IFSC Code" required />
                 </div>
 
                 <div class="input-box">
-                  <span class="details">Your Address</span>
-                  <input type="text" placeholder="Your Address" required />
+                  <span class="details">Bank Branch</span>
+                  <input type="text" placeholder="Bank Branch" required />
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Account type</span>
+                  <select>
+                    <option>current</option>
+                    <option>Saving</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div style="display: flex; flex-direction: column">
+                    <span class="details">Upload your Cancel cheque</span>
+
+                    <input type="file" id="file" style="display: none" />
+                    <label for="file" class="btn-7">upload</label>
+                  </div>
                 </div>
 
                 <!-- <div class="input-box">
@@ -306,14 +390,18 @@
               </div>
             </div> -->
               <div class="button">
-                <input type="submit" value="Register" />
+                <input
+                  type="submit"
+                  value="Register"
+                  onclick="register(event)"
+                />
               </div>
-            </form>
-          </div>
+            </div>
 
-          <!--   here is new one -->
+            <!--   here is new one -->
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <script src="./registration.js"></script>
   </body>
