@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="main">
-      <form action="#">
+      <form action="#" onsubmit="return validate()">
         <div class="secondary">
           <div class="container" style="height: fit-content">
             <div class="title">Seller information</div>
@@ -75,14 +75,13 @@
                   />
                 </div>
 
-                <div
-                  class="input-box"
-                  style="display: flex; flex-direction: row"
-                >
-                  <div>
+                <div class="">
+                  <div class="uploadthing-main">
                     <span class="details">Upload your adhar card</span>
 
-                    <label for="file" class="btn-7" required>upload</label>
+                    <label for="file" class="uploadthing" required
+                      >upload</label
+                    >
                   </div>
                 </div>
 
@@ -97,21 +96,7 @@
                   >
                     <span class="details">Upload your Pan card</span>
 
-                    <label
-                      for="file"
-                      style="
-                        border: olivedrab 1px solid;
-
-                        width: fit-content;
-
-                        padding: 5%;
-                        height: fit-content;
-                        color: black;
-
-                        align-items: center;
-                        justify-content: center;
-                      "
-                      required
+                    <label for="file" class="uploadthing" required
                       >upload</label
                     >
                   </div>
@@ -301,12 +286,7 @@
                 </div>
               </div>
 
-              <div class="button">
-                <input
-                  type="submit"
-                  value="Register"
-                  onclick="register(event)"
-                />
+            
               </div>
               <div class="button">
                 <input
@@ -319,6 +299,13 @@
             </div>
           </div>
         </div>
+        <div class="">
+          <input
+            type="submit"
+            value="Register"
+            onclick="register(event)"
+            style="background-color: black; color: white; border: black 1px solid;"
+          />
       </form>
     </div>
     <script src="./registration.js"></script>
