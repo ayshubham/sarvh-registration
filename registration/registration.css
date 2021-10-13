@@ -173,6 +173,12 @@ form .button input:hover {
   .container {
     max-width: 100%;
   }
+  .main {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
   form .user-details .input-box {
     margin-bottom: 15px;
     width: 100%;

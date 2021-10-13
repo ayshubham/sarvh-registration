@@ -21,6 +21,13 @@ function next2Back(e) {
     "translateX(0%)";
   //   document.getElementById("btn1").addEventListener("click", (e) => {});
 }
+function next3Back(e) {
+  console.log(e);
+  e.preventDefault();
+  document.getElementsByClassName("secondary")[0].style.transform =
+    "translateX(-100%)";
+  //   document.getElementById("btn1").addEventListener("click", (e) => {});
+}
 
 function register(e) {
   e.preventDefault();
