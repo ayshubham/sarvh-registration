@@ -74,6 +74,7 @@
                     name="yourpincode"
                   />
                 </div>
+               
 
                 <div class="">
                   <div class="uploadthing-main">
@@ -87,21 +88,17 @@
 
                 <div>
                   <div
-                    style="
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                      align-items: center;
-                    "
+                 class="uploadthing-main"
                   >
                     <span class="details">Upload your Pan card</span>
 
-                    <label for="file" class="uploadthing" required
-                      >upload</label
+                    <input for="file" class="uploadthing" type="file" value="upload" required
+                      >upload</input
                     >
                   </div>
+                  </div>
                 </div>
-              </div>
+              
 
               <div class="button">
                 <input
@@ -133,7 +130,7 @@
                 <div class="input-box">
                   <div style="display: flex; flex-direction: row; gap: 2px">
                     <span class="details">Company Pan</span>
-                    <div class="tooltip">
+                    <div class="tooltip" style="cursor: help;">
                       ⓘ
                       <span class="tooltiptext"
                         >If you are proprietorship then enter your pancard
@@ -190,7 +187,8 @@
                 </div>
               </div>
 
-              <div class="button">
+              
+              <div class="button" style="width: 40%;">
                 <input
                   value="Next"
                   type="button"
@@ -198,7 +196,7 @@
                   onclick="next2(event)"
                 />
               </div>
-              <div class="button">
+              <div class="button" style="width: 40%;">
                 <input
                   value="Back"
                   type="button"
@@ -206,6 +204,7 @@
                   onclick="next2Back(event)"
                 />
               </div>
+            
             </div>
 
             <!--   here is new one -->
@@ -265,28 +264,23 @@
 
                 <div class="input-box">
                   <span class="details">Account type</span>
-                  <select name="accounttype" required>
-                    <option>current</option>
-                    <option>Saving</option>
+                  
+                  <select class="minimal">
+                    <option>Current</option>
+                    <option>Savings</option>
+                    
                   </select>
                 </div>
 
-                <div>
-                  <div style="display: flex; flex-direction: column">
-                    <span class="details">Upload your Cancel cheque</span>
+                <div class="">
+                  <div class="uploadthing-main">
+                    <span class="details">Upload cancel cheque</span>
 
-                    <input
-                      type="file"
-                      id="file"
-                      style="display: none"
-                      required
-                    />
-                    <label for="file" class="btn-7">upload</label>
+                    <label for="file" class="uploadthing" required
+                      >upload</label
+                    >
                   </div>
                 </div>
-              </div>
-
-            
               </div>
               <div class="button">
                 <input
@@ -296,6 +290,20 @@
                   onclick="next3Back(event)"
                 />
               </div>
+            </div>
+                </div>
+              </div>
+
+            
+              <!-- </div>
+              <div class="button">
+                <input
+                  value="Back"
+                  type="button"
+                  id="btnback"
+                  onclick="next3Back(event)"
+                />
+              </div> -->
             </div>
           </div>
         </div>
