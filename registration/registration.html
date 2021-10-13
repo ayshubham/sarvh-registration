@@ -18,7 +18,12 @@
               <div class="user-details">
                 <div class="input-box">
                   <span class="details">Full Name</span>
-                  <input type="text" placeholder="Enter your name" required />
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    name="fullname"
+                  />
                 </div>
                 <div class="input-box">
                   <span class="details">Pan Number</span>
@@ -27,6 +32,7 @@
                     placeholder="Your Pan Number"
                     required
                     maxlength="10"
+                    name="pancard"
                   />
                 </div>
                 <div class="input-box">
@@ -44,12 +50,18 @@
                     placeholder="Your Phone Address"
                     required
                     maxlength="10"
+                    name="phonenumber"
                   />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Your Address</span>
-                  <input type="text" placeholder="Your Address" required />
+                  <input
+                    type="text"
+                    placeholder="Your Address"
+                    required
+                    name="youraddress"
+                  />
                 </div>
 
                 <div class="input-box">
@@ -59,6 +71,7 @@
                     placeholder="Your Pincode"
                     required
                     maxlength="6"
+                    name="yourpincode"
                   />
                 </div>
 
@@ -69,17 +82,38 @@
                   <div>
                     <span class="details">Upload your adhar card</span>
 
-                    <input type="file" id="file" style="display: none" />
-                    <label for="file" class="btn-7">upload</label>
+                    <label for="file" class="btn-7" required>upload</label>
                   </div>
                 </div>
 
                 <div>
-                  <div style="display: flex; flex-direction: column">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
                     <span class="details">Upload your Pan card</span>
 
-                    <input type="file" id="file" style="display: none" />
-                    <label for="file" class="btn-7">upload</label>
+                    <label
+                      for="file"
+                      style="
+                        border: olivedrab 1px solid;
+
+                        width: fit-content;
+
+                        padding: 5%;
+                        height: fit-content;
+                        color: black;
+
+                        align-items: center;
+                        justify-content: center;
+                      "
+                      required
+                      >upload</label
+                    >
                   </div>
                 </div>
               </div>
@@ -104,7 +138,12 @@
               <div class="user-details">
                 <div class="input-box">
                   <span class="details">Shop Name</span>
-                  <input type="text" placeholder="Enter Shop" required />
+                  <input
+                    type="text"
+                    placeholder="Enter Shop"
+                    required
+                    name="shopname"
+                  />
                 </div>
                 <div class="input-box">
                   <div style="display: flex; flex-direction: row; gap: 2px">
@@ -121,6 +160,7 @@
                     type="text"
                     placeholder="Company Pan Number"
                     required
+                    name="companypannumber"
                   />
                 </div>
                 <div class="input-box">
@@ -129,6 +169,7 @@
                     type="text"
                     placeholder="Shop Email Address"
                     required
+                    name="shopemail"
                   />
                 </div>
                 <div class="input-box">
@@ -138,12 +179,18 @@
                     placeholder="Shop Phone Number"
                     required
                     maxlength="10"
+                    name="shopphonenumber"
                   />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Shop Address</span>
-                  <input type="text" placeholder="Shop Address" required />
+                  <input
+                    type="text"
+                    placeholder="Shop Address"
+                    required
+                    name="shopaddress"
+                  />
                 </div>
 
                 <div class="input-box">
@@ -153,6 +200,7 @@
                     placeholder="Shop Address"
                     required
                     maxlength="6"
+                    name="shoppincode"
                   />
                 </div>
               </div>
@@ -185,11 +233,21 @@
               <div class="user-details">
                 <div class="input-box">
                   <span class="details">GSTIN</span>
-                  <input type="text" placeholder="GST NUMBER" required />
+                  <input
+                    type="text"
+                    placeholder="GST NUMBER"
+                    required
+                    name="gstin"
+                  />
                 </div>
                 <div class="input-box">
                   <span class="details">Bank Name</span>
-                  <input type="text" placeholder="Bank Name" required />
+                  <input
+                    type="text"
+                    placeholder="Bank Name"
+                    required
+                    name="bankname"
+                  />
                 </div>
                 <div class="input-box">
                   <span class="details">Account Number</span>
@@ -197,21 +255,32 @@
                     type="text"
                     placeholder="Your Account Number"
                     required
+                    name="accountnumber"
                   />
                 </div>
                 <div class="input-box">
                   <span class="details">IFSC</span>
-                  <input type="text" placeholder="IFSC Code" required />
+                  <input
+                    type="text"
+                    placeholder="IFSC Code"
+                    required
+                    name="ifsc"
+                  />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Bank Branch</span>
-                  <input type="text" placeholder="Bank Branch" required />
+                  <input
+                    type="text"
+                    placeholder="Bank Branch"
+                    required
+                    name="bankbranch"
+                  />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Account type</span>
-                  <select>
+                  <select name="accounttype" required>
                     <option>current</option>
                     <option>Saving</option>
                   </select>
@@ -221,32 +290,17 @@
                   <div style="display: flex; flex-direction: column">
                     <span class="details">Upload your Cancel cheque</span>
 
-                    <input type="file" id="file" style="display: none" />
+                    <input
+                      type="file"
+                      id="file"
+                      style="display: none"
+                      required
+                    />
                     <label for="file" class="btn-7">upload</label>
                   </div>
                 </div>
               </div>
 
-              <!-- <div class="gender-details">
-              <input type="radio" name="gender" id="dot-1" />
-              <input type="radio" name="gender" id="dot-2" />
-              <input type="radio" name="gender" id="dot-3" />
-              <span class="gender-title">Gender</span>
-              <div class="category">
-                <label for="dot-1">
-                  <span class="dot one"></span>
-                  <span class="gender">Male</span>
-                </label>
-                <label for="dot-2">
-                  <span class="dot two"></span>
-                  <span class="gender">Female</span>
-                </label>
-                <label for="dot-3">
-                  <span class="dot three"></span>
-                  <span class="gender">Prefer not to say</span>
-                </label>
-              </div>
-            </div> -->
               <div class="button">
                 <input
                   type="submit"
@@ -263,8 +317,6 @@
                 />
               </div>
             </div>
-
-            <!--   here is new one -->
           </div>
         </div>
       </form>
