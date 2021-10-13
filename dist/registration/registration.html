@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="main">
-      <form action="/register/submit" method="post" onsubmit="return validate()">
+      <form enctype="multipart/form-data" action="/register/submit" method="post" onsubmit="return validate()">
         <div class="secondary">
           <div class="container" style="height: fit-content">
             <div class="title">Seller information</div>
@@ -79,9 +79,8 @@
                 <div class="">
                   <div class="uploadthing-main">
                     <span class="details">Upload your adhar card</span>
-                    <label for="file" class="uploadthing" required
-                      >upload</label
-                    >
+                    <input value='upload' type="file" name="adhar" class="uploadthing" required
+                      />
                   </div>
                 </div>
 

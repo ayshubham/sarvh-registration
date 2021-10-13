@@ -24,6 +24,7 @@ router.get('/failed', (req,res) =>{
 });
 router.post('/submit', (req,res) =>{
   addDataToDB(req.body.email);
+  console.log(req.files)
   if(!req.body.fullname){
     res.send({statusCode:400,msg:'type fullname'})
   }
