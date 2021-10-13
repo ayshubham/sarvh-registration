@@ -23,7 +23,7 @@ router.get('/failed', (req,res) =>{
   res.sendFile(path.join(__dirname, '../dist/registration/registration.html'));
 });
 router.post('/submit', (req,res) =>{
-  addDataToDB(req.body.email);
+  addDataToDB(req.body);
   console.log(req.files)
   if(!req.body.fullname){
     res.send({statusCode:400,msg:'type fullname'})
