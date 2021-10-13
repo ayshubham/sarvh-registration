@@ -4,12 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <!---<title> Responsive Registration Form | CodingLab </title>--->
-    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="registration/registration.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="main">
-      <form action="#" onsubmit="return validate()">
+      <form action="/register/submit" method="post" onsubmit="return validate()">
         <div class="secondary">
           <div class="container" style="height: fit-content">
             <div class="title">Seller information</div>
@@ -21,8 +21,8 @@
                   <input
                     type="text"
                     placeholder="Enter your name"
-                    required
                     name="fullname"
+                    id='fullname'
                   />
                 </div>
                 <div class="input-box">
@@ -30,9 +30,9 @@
                   <input
                     type="text"
                     placeholder="Your Pan Number"
-                    required
                     maxlength="10"
                     name="pancard"
+                    id="pancard"
                   />
                 </div>
                 <div class="input-box">
@@ -40,7 +40,8 @@
                   <input
                     type="text"
                     placeholder="Business Email Address"
-                    required
+                    name="email"
+                    id="email"
                   />
                 </div>
                 <div class="input-box">
@@ -48,9 +49,9 @@
                   <input
                     type="text"
                     placeholder="Your Phone Address"
-                    required
                     maxlength="10"
                     name="phonenumber"
+                    id="phonenumber"
                   />
                 </div>
 
@@ -59,8 +60,8 @@
                   <input
                     type="text"
                     placeholder="Your Address"
-                    required
                     name="youraddress"
+                    id="youraddress"
                   />
                 </div>
 
@@ -69,16 +70,15 @@
                   <input
                     type="text"
                     placeholder="Your Pincode"
-                    required
                     maxlength="6"
                     name="yourpincode"
+                    id="yourpincode"
                   />
                 </div>
 
                 <div class="">
                   <div class="uploadthing-main">
                     <span class="details">Upload your adhar card</span>
-
                     <label for="file" class="uploadthing" required
                       >upload</label
                     >
@@ -299,15 +299,13 @@
             </div>
           </div>
         </div>
-        <div class="">
-          <input
-            type="submit"
-            value="Register"
-            onclick="register(event)"
-            style="background-color: black; color: white; border: black 1px solid;"
-          />
+        <input
+          type="submit"
+          value="Register"
+          style="background-color: black; color: white; border: black 1px solid;"
+        />
       </form>
     </div>
-    <script src="./registration.js"></script>
+    <script src="registration/registration.js"></script>
   </body>
 </html>
