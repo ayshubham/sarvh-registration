@@ -149,7 +149,7 @@ form .button input {
 form .button input:hover {
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-  transition: ease-in-out 400ms;
+  transition: ease-in 1s;
 }
 
 @media (max-width: 584px) {
