@@ -24,11 +24,11 @@ app.use(express.json());
 router.get('/', (req,res) =>{
   res.sendFile(path.join(__dirname, '../dist/test.html'));
 });
-router.get('/success', (req,res) =>{
-  res.sendFile(path.join(__dirname, '../dist/registration/registration.html'));
+router.get("/success", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/registration/registration.html"));
 });
-router.get('/failed', (req,res) =>{
-  res.sendFile(path.join(__dirname, '../dist/registration/registration.html'));
+router.get("/failed", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/registration/registration.html"));
 });
 router.post('/submit', async (req,res) =>{
 
@@ -91,5 +91,5 @@ router.get('/file/:fileSize',async (req,res)=>{
 })
 app.use('/register',router)
 
-module.exports=app;
+module.exports = app;
 module.exports.handler = serverless(app);
