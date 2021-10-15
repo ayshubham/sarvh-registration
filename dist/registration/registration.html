@@ -5,10 +5,35 @@
     <meta charset="UTF-8" />
     <!---<title> Responsive Registration Form | CodingLab </title>--->
     <link rel="stylesheet" href="./registration.css" />
+
+    <meta name="theme-color" content="#FFEF78" />
+
+    <meta name="theme-color" 
+      content="#FFEF78" 
+      media="(prefers-color-scheme: light)">
+<meta name="theme-color" 
+      content="#FFEF78" 
+      media="(prefers-color-scheme: dark)">
+
+    <meta name="theme-color" content="#FFEF78">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#FFEF78">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFEF78">
+
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFEF78">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
+    
     <div class="main">
+      <div class="logo">
+        <img src="../assets/img/CURVED.png" style="width: auto; height: auto; max-width: 60px; border-radius: 8px;">
+      <img src="../assets/img/Group2.png" style="width: auto; height: auto; max-width: 150px;">
+    </div>
       <form enctype="multipart/form-data" action="/register/submit" method="post" onsubmit="return validate()">
         <div class="secondary">
           <div class="container" style="height: fit-content">
@@ -76,28 +101,63 @@
                   />
                 </div>
                
+               
 
-                <div class="">
-                  <div class="uploadthing-main">
-                    <span class="details">Upload your adhar card</span>
-                    <input for="file" class="uploadthing" type="file" required
-                      >upload</input
-                    >
-                  </div>
-                </div>
+                              <div class="file-input">
+                                <input
+                                  type="file"
+                                  name="adhar-file"
+                                  id="adhar-file"
+                                  class="file-input__input"
+                                />
+                                <label class="file-input__label" for="file-input">
+                                  <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-prefix="fas"
+                                    data-icon="upload"
+                                    class="svg-inline--fa fa-upload fa-w-16"
+                                    role="img"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                                    ></path>
+                                  </svg>
+                                  <span>Upload Your Adhar Card </span></label
+                                >
+                              </div>
 
-                <div>
-                  <div
-                 class="uploadthing-main"
-                  >
-                    <span class="details">Upload your Pan card</span>
-
-                    <input for="file" class="uploadthing" type="file" value="upload" required
-                      >upload</input
-                    >
-                  </div>
-                  </div>
-                </div>
+                            <div class="file-input">
+                              <input
+                                type="file"
+                                name="pancard-file"
+                                id="pancard-file"
+                                class="file-input__input"
+                              />
+                              <label class="file-input__label" for="file-input">
+                                <svg
+                                  aria-hidden="true"
+                                  focusable="false"
+                                  data-prefix="fas"
+                                  data-icon="upload"
+                                  class="svg-inline--fa fa-upload fa-w-16"
+                                  role="img"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path
+                                    fill="currentColor"
+                                    d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                                  ></path>
+                                </svg>
+                                <span>Upload Your Pan Card </span></label
+                              >
+                            </div>
+               
+              </div>
               
 
               <div class="button">
@@ -125,6 +185,7 @@
                     placeholder="Enter Shop"
                     required
                     name="shopname"
+                    id="shopname"
                   />
                 </div>
                 <div class="input-box">
@@ -143,6 +204,7 @@
                     placeholder="Company Pan Number"
                     required
                     name="companypannumber"
+                    id="companypannumber"
                   />
                 </div>
                 <div class="input-box">
@@ -152,6 +214,7 @@
                     placeholder="Shop Email Address"
                     required
                     name="shopemail"
+                    id="shopemail"
                   />
                 </div>
                 <div class="input-box">
@@ -162,6 +225,7 @@
                     required
                     maxlength="10"
                     name="shopphonenumber"
+                    id="shopphonenumber"
                   />
                 </div>
 
@@ -172,6 +236,7 @@
                     placeholder="Shop Address"
                     required
                     name="shopaddress"
+                    id="shopaddress"
                   />
                 </div>
 
@@ -183,12 +248,28 @@
                     required
                     maxlength="6"
                     name="shoppincode"
+                    id="shoppincode"
                   />
                 </div>
               </div>
 
-              
-              <div class="button" style="width: 40%;">
+              <div style="display: flex; flex-direction: row; justify-content: space-between;">
+
+
+
+
+
+                <div class="button" style="width: 40%; margin: 0;">
+                  <input
+                    value="Back"
+                    type="button"
+                    id="btnback"
+                    onclick="next2Back(event)"
+                  />
+                </div>
+
+
+              <div class="button" style="width: 40%; margin: 0;">
                 <input
                   value="Next"
                   type="button"
@@ -196,16 +277,14 @@
                   onclick="next2(event)"
                 />
               </div>
-              <div class="button" style="width: 40%;">
-                <input
-                  value="Back"
-                  type="button"
-                  id="btnback"
-                  onclick="next2Back(event)"
-                />
-              </div>
+
+
+
+              
             
             </div>
+
+          </div>
 
             <!--   here is new one -->
           </div>
@@ -222,6 +301,7 @@
                     placeholder="GST NUMBER"
                     required
                     name="gstin"
+                    id="gstin"
                   />
                 </div>
                 <div class="input-box">
@@ -231,6 +311,7 @@
                     placeholder="Bank Name"
                     required
                     name="bankname"
+                    id="bankname"
                   />
                 </div>
                 <div class="input-box">
@@ -240,6 +321,7 @@
                     placeholder="Your Account Number"
                     required
                     name="accountnumber"
+                    id="accountnumber"
                   />
                 </div>
                 <div class="input-box">
@@ -249,6 +331,7 @@
                     placeholder="IFSC Code"
                     required
                     name="ifsc"
+                    id="ifsc"
                   />
                 </div>
 
@@ -259,13 +342,16 @@
                     placeholder="Bank Branch"
                     required
                     name="bankbranch"
+                    id="bankbranch"
                   />
                 </div>
 
                 <div class="input-box">
                   <span class="details">Account type</span>
                   
-                  <select class="minimal">
+                  <select class="minimal"
+                  name="accounttype"
+                  id="accounttype">
                     <option>Current</option>
                     <option>Savings</option>
                     
@@ -273,16 +359,40 @@
                 </div>
 
                 <div class="">
-                  <div class="uploadthing-main">
-                    <span class="details">Upload cancel cheque</span>
-
-                    <input for="file" class="uploadthing" required type="file"
-                      >upload</input
+                  <div class="file-input">
+                    <input
+                      type="file"
+                      name="cheque-file"
+                      id="cheque-file"
+                      class="file-input__input"
+                    />
+                    <label class="file-input__label" for="file-input">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="upload"
+                        class="svg-inline--fa fa-upload fa-w-16"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                        ></path>
+                      </svg>
+                      <span>Upload Cancel Cheque </span></label
                     >
                   </div>
+     
                 </div>
               </div>
-              <div class="button">
+             
+                
+
+              <div style="display: flex; flex-direction: row; justify-content: space-between;">
+              <div class="button" style="width: 40%; margin: 0;">
                 <input
                   value="Back"
                   type="button"
@@ -290,6 +400,21 @@
                   onclick="next3Back(event)"
                 />
               </div>
+
+              <div class="button" style="width: 40%; margin: 0;">
+                <input
+                  value="Submit"
+                  type="button"
+                  id="btnback"
+                  
+                />
+              </div>
+              </div>
+
+              
+
+
+            
             </div>
                 </div>
               </div>
@@ -307,13 +432,13 @@
             </div>
           </div>
         </div>
-        <input
+        <!-- <input
           type="submit"
           value="Register"
           style="background-color: black; color: white; border: black 1px solid;"
-        />
+        /> -->
       </form>
     </div>
-    <script src="registration/registration.js"></script>
+    <script src="./registration.js"></script>
   </body>
 </html>
