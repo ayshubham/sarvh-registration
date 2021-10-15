@@ -33,12 +33,11 @@ document.querySelector('#form').addEventListener('submit',(e)=>{
     console.log('file size should be less than 6mb')
   } else {
     getBase64(file).then((data) => {
-      console.log(data)
-      
+      console.log(data);
       postData('http://localhost:8888/register/submit', { file:{adhar:data}})
         .then(data1 => {
           console.log(data1); // JSON data parsed by `data.json()` call
-        });
+      });
       // // document.querySelector('#form').submit();
       }
     );

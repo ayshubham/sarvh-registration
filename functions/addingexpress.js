@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({limit: '6mb', extended: true}));
 app.use(express.json());
 
 router.get('/', (req,res) =>{
-  res.sendFile(path.join(__dirname, '../dist/test.html'));
+  res.sendFile(path.join(__dirname, '../dist/registration/registration.html'));
 });
 router.get("/success", (req, res) => {
   res.sendFile(path.join(__dirname, "../dist/registration/registration.html"));
