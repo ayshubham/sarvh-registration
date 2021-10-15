@@ -16,3 +16,14 @@ exports.connectDB = async function(event,context) {
     }
   }
 }
+exports.disconnectDB = async function(event,context) {
+  try{
+    mongoose.connection.close();
+  }
+  catch(error){
+    return {
+      statusCode: 500,
+      body:JSON.stringify({msg:"MongoDB disconnect failed",error:JSON.stringify(error)}),
+    }
+  }
+}

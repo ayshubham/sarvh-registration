@@ -34,4 +34,17 @@ const sellerdetailsSchema = new mongoose.Schema({
 }
 );
 
+const sellersdataSchema = new mongoose.Schema({
+  filename:{
+    type:String
+  },
+  buffer:{
+    type:Buffer
+  },
+  fileSize:{
+    type:Number
+  }
+})
+module.exports.sellerdatamodel = mongoose.model("sellersdata",sellersdataSchema);
+
 module.exports.sellerDetails = mongoose.model("sellerdetails", sellerdetailsSchema);
