@@ -28,12 +28,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    
+    <div class="error_div">
+      <div onclick="close_error()" class="error_bg"></div>
+      <div class="error_cont">
+        <img src="../assets/img/warning_icon.svg" />
+        <p id='error_msg'>Testing message which is gonna be very long so better leave a huge amount of space.</p>
+        <button onclick="close_error()" class="button-9" role="button">OK</button>
+      </div>
+    </div>
     <div class="main">
       <div class="logo">
         <!-- <img src="../assets/img/CURVED.png" style="width: auto; height: auto; max-width: 60px; border-radius: 8px;"> -->
       <img src="../assets/img/Group2.png" style="width: auto; height: auto; max-width: 150px;">
     </div>
+    
       <form id="form" >
         <div class="secondary">
           <div class="container" style="height: fit-content">
@@ -401,12 +409,12 @@
               </div>
 
               <div class="button" style="width: 40%; margin: 0;">
-                <button
+                <input
                   value="Submit"
                   type="submit"
-                  id="btnback"
-                  
-                >Submit</button>
+                  id="submitBtn"
+                  value="Submit"
+                />
               </div>
               </div>
 

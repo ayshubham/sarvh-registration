@@ -1,5 +1,4 @@
 function next1(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-100%)";
@@ -7,7 +6,6 @@ function next1(e) {
 }
 
 function next2(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-200%)";
@@ -15,47 +13,19 @@ function next2(e) {
 }
 
 function next2Back(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(0%)";
   //   document.getElementById("btn1").addEventListener("click", (e) => {});
 }
 function next3Back(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-100%)";
   //   document.getElementById("btn1").addEventListener("click", (e) => {});
 }
-
-function validate() {
-  let msg = "";
-  console.log(document.querySelector("#fullname"));
-  if (!document.querySelector("#fullname").value) {
-    msg = "type fullname";
-    return false;
-  }
-  if (!(document.querySelector("#pancard").value.length <= 10)) {
-    msg = "type pan number equal to 10 characters";
-    return false;
-  }
-  if (!document.querySelector("#email").value) {
-    msg = "type email";
-    return false;
-  }
-  if (!(document.querySelector("#phonenumber").value.length <= 10)) {
-    msg = "type phone number equal to 10 characters";
-    return false;
-  }
-  if (!document.querySelector("#youraddress").value) {
-    msg = "type your address";
-    return false;
-  }
-  if (!(document.querySelector("#yourpincode").value.length <= 6)) {
-    msg = "type pin code equal to 6 characters";
-    return false;
-  }
+function close_error(){
+  document.querySelector('.error_div').style.display = 'none';
 }
 
 async function postData(url = '', data = {}) {
@@ -72,13 +42,9 @@ async function postData(url = '', data = {}) {
   return response.json(); // parses JSON response into native JavaScript objects
 }
 
-document.querySelector('#form').addEventListener('submit', async (e)=>{
+document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
   e.preventDefault()
   let formdata =new FormData(document.getElementById("form"))
-  console.log(formdata.values())
-  for (var value of formdata.values()) {
-    console.log(value);
-  }
   response = await fetch("https://sarvh-registration.herokuapp.com/api/form", {
     
     body: formdata,
@@ -88,8 +54,13 @@ document.querySelector('#form').addEventListener('submit', async (e)=>{
     // },
     method: "post",
   });
-  response.text().then(function (text) {
-    console.log(text)
-  });
+  if(response.status==400){
+    response.text().then(function (text) {
+      document.getElementById('error_msg').innerHTML=text;
+      document.querySelector('.error_div').style.display = 'block';
+
+    });
+  }
+  
   
 })
