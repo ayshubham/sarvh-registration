@@ -15,6 +15,7 @@ const router = express.Router();
 
 const MONGO_URI = "mongodb+srv://sarvh:sness@cluster0.iepnw.mongodb.net/sellersdata?authSource=admin&replicaSet=atlas-6lfi6z-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true";
 
+
 app.use(express.static("./dist"));
 app.use(cors());
 app.use(bodyParser.json({limit: '6mb'}));

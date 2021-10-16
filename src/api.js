@@ -5,7 +5,7 @@ const serverless = require('serverless-http');
 const app= express();
 const router = express.Router();
 
-const MONGO_URI = "mongodb+srv://sarvh:sness@cluster0.iepnw.mongodb.net/sellersdata?authSource=admin&replicaSet=atlas-6lfi6z-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true";
+
 
 // const mongoose = require("mongoose");
 // const connectDB = async () => {
