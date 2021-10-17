@@ -9,6 +9,9 @@ app.use(express.static("./dist"));
 app.use(express.json());
 
 router.get('/', (req,res) =>{
+  res.sendFile(path.join(__dirname, '../dist/registration/pre-registrationPage.html'));
+});
+router.get('/form', (req,res) =>{
   res.sendFile(path.join(__dirname, '../dist/registration/registration.html'));
 });
 router.get("/success", (req, res) => {
