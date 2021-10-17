@@ -46,7 +46,7 @@ document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
   e.preventDefault();
 
   let formdata =new FormData(document.getElementById("form"))
-  response = await fetch("http://http://sarvh-registration.herokuapp.com//api/form", {
+  response = await fetch("https://sarvh-registration.herokuapp.com/api/form", {
     
     body: formdata,
     // headers: {
