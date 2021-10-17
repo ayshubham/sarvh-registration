@@ -25,24 +25,14 @@ async function postData(url = '', data = {}) {
 }
 document.querySelector('#form').addEventListener('submit',(e)=>{
   e.preventDefault()
-  file_div = document.querySelector('#file')
-  // data = getBase64(e.target.elements.adhar.value)
-  file=file_div.files[0];
-  console.log(file)
-  if(file.size >= 6*1024*1024){
-    console.log('file size should be less than 6mb')
-  } else {
-    getBase64(file).then((data) => {
-      console.log(data)
-      
-      postData('http://localhost:8888/register/submit', { file:{adhar:data}})
-        .then(data1 => {
-          console.log(data1); // JSON data parsed by `data.json()` call
-        });
-      // // document.querySelector('#form').submit();
-      }
-    );
-  }
+  fetch("http://localhost:8000/api/form", {
+    body: new FormData(document.getElementById("form")),
+    headers: {
+        // "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "multipart/form-data",
+    },
+    method: "post",
+  })
 })
 function convert(e){
   console.log(e);
