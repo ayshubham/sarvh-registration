@@ -43,7 +43,8 @@ async function postData(url = '', data = {}) {
 }
 
 document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
-  e.preventDefault()
+  e.preventDefault();
+
   let formdata =new FormData(document.getElementById("form"))
   response = await fetch("https://sarvh-registration.herokuapp.com/api/form", {
     
@@ -60,7 +61,6 @@ document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
       document.querySelector('.error_div').style.display = 'block';
 
     });
-  }
-  
+  }  
   
 })
