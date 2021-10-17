@@ -1,5 +1,4 @@
 function next1(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-100%)";
@@ -7,7 +6,6 @@ function next1(e) {
 }
 
 function next2(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-200%)";
@@ -15,45 +13,54 @@ function next2(e) {
 }
 
 function next2Back(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(0%)";
   //   document.getElementById("btn1").addEventListener("click", (e) => {});
 }
 function next3Back(e) {
-  console.log(e);
   e.preventDefault();
   document.getElementsByClassName("secondary")[0].style.transform =
     "translateX(-100%)";
   //   document.getElementById("btn1").addEventListener("click", (e) => {});
 }
-
-function validate() {
-  let msg = "";
-  console.log(document.querySelector("#fullname"));
-  if (!document.querySelector("#fullname").value) {
-    msg = "type fullname";
-    return false;
-  }
-  if (!(document.querySelector("#pancard").value.length <= 10)) {
-    msg = "type pan number equal to 10 characters";
-    return false;
-  }
-  if (!document.querySelector("#email").value) {
-    msg = "type email";
-    return false;
-  }
-  if (!(document.querySelector("#phonenumber").value.length <= 10)) {
-    msg = "type phone number equal to 10 characters";
-    return false;
-  }
-  if (!document.querySelector("#youraddress").value) {
-    msg = "type your address";
-    return false;
-  }
-  if (!(document.querySelector("#yourpincode").value.length <= 6)) {
-    msg = "type pin code equal to 6 characters";
-    return false;
-  }
+function close_error(){
+  document.querySelector('.error_div').style.display = 'none';
 }
+
+async function postData(url = '', data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
+  e.preventDefault()
+  let formdata =new FormData(document.getElementById("form"))
+  response = await fetch("https://sarvh-registration.herokuapp.com/api/form", {
+    
+    body: formdata,
+    // headers: {
+    //     // "Content-Type": "application/x-www-form-urlencoded",
+    //     "Content-Type": "multipart/form-data",
+    // },
+    method: "post",
+  });
+  if(response.status==400){
+    response.text().then(function (text) {
+      document.getElementById('error_msg').innerHTML=text;
+      document.querySelector('.error_div').style.display = 'block';
+
+    });
+  }
+  
+  
+})

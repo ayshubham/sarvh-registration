@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <!---<title> Responsive Registration Form | CodingLab </title>--->
-    <link rel="stylesheet" href="./registration.css" />
+    <link rel="stylesheet" href="registration/registration.css" />
 
     <meta name="theme-color" content="#FFEF78" />
 
@@ -28,12 +28,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    
+    <div class="error_div">
+      <div onclick="close_error()" class="error_bg"></div>
+      <div class="error_cont">
+        <img src="../assets/img/warning_icon.svg" />
+        <p id='error_msg'>Testing message which is gonna be very long so better leave a huge amount of space.</p>
+        <button onclick="close_error()" class="button-9" role="button">OK</button>
+      </div>
+    </div>
     <div class="main">
       <div class="logo">
         <!-- <img src="../assets/img/CURVED.png" style="width: auto; height: auto; max-width: 60px; border-radius: 8px;"> -->
       <img src="../assets/img/Group2.png" style="width: auto; height: auto; max-width: 150px;">
     </div>
+    
       <form id="form" >
         <div class="secondary">
           <div class="container" style="height: fit-content">
@@ -106,11 +114,11 @@
                               <div class="file-input">
                                 <input
                                   type="file"
-                                  name="adhar-file"
-                                  id="adhar-file"
+                                  name="adharfile"
+                                  id="adharfile"
                                   class="file-input__input"
                                 />
-                                <label class="file-input__label" for="file-input">
+                                <label class="file-input__label" for="adharfile">
                                   <svg
                                     aria-hidden="true"
                                     focusable="false"
@@ -133,11 +141,11 @@
                             <div class="file-input">
                               <input
                                 type="file"
-                                name="pancard-file"
-                                id="pancard-file"
+                                name="pancardfile"
+                                id="pancardfile"
                                 class="file-input__input"
                               />
-                              <label class="file-input__label" for="file-input">
+                              <label class="file-input__label" for="pancardfile">
                                 <svg
                                   aria-hidden="true"
                                   focusable="false"
@@ -183,7 +191,6 @@
                   <input
                     type="text"
                     placeholder="Enter Shop"
-                    required
                     name="shopname"
                     id="shopname"
                   />
@@ -202,7 +209,7 @@
                   <input
                     type="text"
                     placeholder="Company Pan Number"
-                    required
+                    maxlength="10"
                     name="companypannumber"
                     id="companypannumber"
                   />
@@ -212,7 +219,7 @@
                   <input
                     type="text"
                     placeholder="Shop Email Address"
-                    required
+                    
                     name="shopemail"
                     id="shopemail"
                   />
@@ -222,7 +229,7 @@
                   <input
                     type="text"
                     placeholder="Shop Phone Number"
-                    required
+                    
                     maxlength="10"
                     name="shopphonenumber"
                     id="shopphonenumber"
@@ -234,7 +241,7 @@
                   <input
                     type="text"
                     placeholder="Shop Address"
-                    required
+                    
                     name="shopaddress"
                     id="shopaddress"
                   />
@@ -245,7 +252,7 @@
                   <input
                     type="text"
                     placeholder="Shop Address"
-                    required
+                    
                     maxlength="6"
                     name="shoppincode"
                     id="shoppincode"
@@ -299,7 +306,7 @@
                   <input
                     type="text"
                     placeholder="GST NUMBER"
-                    required
+                    maxlength="15"
                     name="gstin"
                     id="gstin"
                   />
@@ -309,7 +316,7 @@
                   <input
                     type="text"
                     placeholder="Bank Name"
-                    required
+                    
                     name="bankname"
                     id="bankname"
                   />
@@ -319,7 +326,7 @@
                   <input
                     type="text"
                     placeholder="Your Account Number"
-                    required
+                    
                     name="accountnumber"
                     id="accountnumber"
                   />
@@ -329,7 +336,7 @@
                   <input
                     type="text"
                     placeholder="IFSC Code"
-                    required
+                    
                     name="ifsc"
                     id="ifsc"
                   />
@@ -340,7 +347,7 @@
                   <input
                     type="text"
                     placeholder="Bank Branch"
-                    required
+                    
                     name="bankbranch"
                     id="bankbranch"
                   />
@@ -358,28 +365,15 @@
                   </select>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <div style="display: flex; flex-direction: column">
-                    <!-- <span class="details">Upload your Cancel cheque</span> -->
-
-                    <!-- <input
-                      type="file"
-                      id="file"
-                      style="display: none"
-                      required
-                    /> -->
-                    <!-- <label for="file" class="btn-7">upload</label> -->
-=======
                 <div class="">
                   <div class="file-input">
                     <input
                       type="file"
-                      name="cheque-file"
-                      id="cheque-file"
+                      name="chequefile"
+                      id="chequefile"
                       class="file-input__input"
                     />
-                    <label class="file-input__label" for="file-input">
+                    <label class="file-input__label" for="chequefile">
                       <svg
                         aria-hidden="true"
                         focusable="false"
@@ -397,7 +391,6 @@
                       </svg>
                       <span>Upload Cancel Cheque </span></label
                     >
->>>>>>> ef47305607cf21c8ce32167775e4e61c9b374ac3
                   </div>
      
                 </div>
@@ -418,9 +411,9 @@
               <div class="button" style="width: 40%; margin: 0;">
                 <input
                   value="Submit"
-                  type="button"
-                  id="btnback"
-                  
+                  type="submit"
+                  id="submitBtn"
+                  value="Submit"
                 />
               </div>
               </div>
@@ -453,6 +446,6 @@
         /> -->
       </form>
     </div>
-    <script src="./registration.js"></script>
+    <script src="registration/registration.js"></script>
   </body>
 </html>

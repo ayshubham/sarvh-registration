@@ -2,11 +2,6 @@
 functions="functions"
 publish="dist"
 [[redirects]]
-from ="/api/*"
-to="/.netlify/functions/:splat"
-status = 200
-force = true
-[[redirects]]
 from ="/register"
 to="/.netlify/functions/addingexpress/"
 status = 200
