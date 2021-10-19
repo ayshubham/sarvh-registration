@@ -27,3 +27,9 @@ from = "/blog/sustainable"
 to = "sustainable.html"
 status=200
 force=true
+
+[[redirects]]
+from = "/registration/form/terms"
+to = "/terms/index.html"
+status=200
+force=true
