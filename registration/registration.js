@@ -77,7 +77,7 @@ document.querySelector('#submitBtn').addEventListener('click', async (e)=>{
 
 async function submit(){
   document.querySelectorAll('.width')[1].classList.add("is_active");
-  document.querySelectorAll('.width')[1].style.pointerEvent = 'none';
+  document.querySelectorAll('.width')[1].style.pointerEvents = 'none';
   let formdata =new FormData(document.getElementById("form"));
   let requesturl="https://sarvh-registration.herokuapp.com/api/form/submit";
   // let requesturl="http://localhost:8000/api/form/submit";
