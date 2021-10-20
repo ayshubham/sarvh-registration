@@ -12,6 +12,12 @@
   width: 100%;
 }
 
+.fixed{
+  position:fixed;
+  right:1px;
+  bottom:1px;
+}
+
 .svg-vectors {
   display: flex;
   flex-direction: column;

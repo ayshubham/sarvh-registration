@@ -175,7 +175,8 @@ form .button input:hover {
     flex-direction: row;
   } */
   .file-input {
-    margin-bottom: 7px;
+    left: 0px !important;
+    transform: none !important;
   }
   .main {
     width: 100%;
@@ -295,6 +296,16 @@ select.minimal:focus {
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
+}
+
+@media (max-width:972px) {
+  .file-input{
+    position:relative;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+  }
 }
 
 .file-input__input {
