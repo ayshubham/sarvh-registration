@@ -1,13 +1,35 @@
-[build]
-functions="functions"
-publish="dist"
 [[redirects]]
-from ="/register"
-to="/.netlify/functions/addingexpress/"
-status = 200
-force = true
+from = "/registration"
+to = "/registration/pre-registration/index.html"
+status=200
+force=true
+
 [[redirects]]
-from ="/register/*"
-to="/.netlify/functions/addingexpress/"
-status = 200
-force = true
+from = "/registration/form"
+to = "/registration/registration.html"
+status=200
+force=true
+
+[[redirects]]
+from = "/"
+to = "index.html"
+status=200
+force=true
+
+[[redirects]]
+from = "/blog/sarvh"
+to = "sarvh.html"
+status=200
+force=true
+
+[[redirects]]
+from = "/blog/sustainable"
+to = "sustainable.html"
+status=200
+force=true
+
+[[redirects]]
+from = "/registration/form/terms"
+to = "/terms/index.html"
+status=200
+force=true
