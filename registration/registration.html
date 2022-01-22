@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <!---<title> Responsive Registration Form | CodingLab </title>--->
-    <link rel="stylesheet" href="/registration/registration.css" />
+    <link rel="stylesheet" href="./registration.css" />
     <!-- <link rel="stylesheet" href="./registration.css" /> -->
 
     <meta name="theme-color" content="#FFEF78" />
@@ -34,7 +34,7 @@
     <div class="error_div">
       <div onclick="close_error()" class="error_bg"></div>
       <div class="error_cont">
-        <img src="/assets/img/warning_icon.svg" />
+        <img src="../assets/img/warning_icon.svg" />
         <p id="error_msg">
           Testing message which is gonna be very long so better leave a huge
           amount of space.
@@ -47,7 +47,7 @@
     <div class="success_div">
       <div onclick="close_success()" class="error_bg"></div>
       <div class="error_cont">
-        <img src="/assets/img/success.svg" />
+        <img src="../assets/img/success.svg" />
         <p id="succes_msg">
           Please recheck all your details. click cancel to recheck details or
           submit to submit the form
@@ -83,7 +83,7 @@
       <div class="logo">
         <!-- <img src="../assets/img/CURVED.png" style="width: auto; height: auto; max-width: 60px; border-radius: 8px;"> -->
         <img
-          src="/registration/pre-registration/assets/images/Group 2-5.svg"
+          src="../registration/pre-registration/assets/images/Group 2-5.svg"
           style="width: auto; height: auto; max-width: 150px"
         />
       </div>
@@ -297,6 +297,17 @@
                     id="shoppincode"
                   />
                 </div>
+
+                <div class="input-box">
+                  <span class="details">GSTIN</span>
+                  <input
+                    type="text"
+                    placeholder="GST NUMBER"
+                    maxlength="15"
+                    name="gstin"
+                    id="gstin"
+                  />
+                </div>
               </div>
 
               <div
@@ -315,6 +326,7 @@
                   />
                 </div>
 
+
                 <div class="button" style="width: 40%; margin: 0">
                   <input
                     value="Next"
@@ -330,20 +342,10 @@
           </div>
 
           <div class="container" style="height: fit-content; box-shadow: none">
-            <div class="title">Bank Account</div>
+            <div class="title">Bank Account (Optional)</div>
 
             <div class="content">
               <div class="user-details">
-                <div class="input-box">
-                  <span class="details">GSTIN</span>
-                  <input
-                    type="text"
-                    placeholder="GST NUMBER"
-                    maxlength="15"
-                    name="gstin"
-                    id="gstin"
-                  />
-                </div>
                 <div class="input-box">
                   <span class="details">Bank Name</span>
                   <input
@@ -450,7 +452,7 @@
         /> -->
       </form>
     </div>
-    <script src="/registration/registration.js"></script>
+    <script src="./registration.js"></script>
     <!-- <script src="./registration.js"></script> -->
   </body>
 </html>
