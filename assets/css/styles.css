@@ -607,11 +607,12 @@ img {
 }
 
 .beta_button {
-  border: 1px solid #2b3cfd;
+  border: 1px solid #3344f9;
   padding: 0.4rem;
   border-radius: 7px;
   cursor: pointer;
   color: white;
+  background-color: #2b3cfd;
 }
 
 .beta_button:hover {
