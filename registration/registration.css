@@ -374,6 +374,7 @@ select:-moz-focusring {
   -webkit-box-shadow: -2px -2px 24px -9px rgba(0, 0, 0, 0.75) inset;
   -moz-box-shadow: -2px -2px 24px -9px rgba(0, 0, 0, 0.75) inset;
   text-align: center;
+  overflow: scroll;
 }
 @media (max-width: 880px) {
   .error_cont {
@@ -477,6 +478,8 @@ select:-moz-focusring {
   touch-action: manipulation;
   width: 100%;
   transition: all 0.25s ease-in;
+  min-width: 40px;
+  min-height: 44px;
 }
 
 .button-9:disabled {
