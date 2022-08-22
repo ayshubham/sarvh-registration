@@ -47,6 +47,19 @@
   white-space: nowrap;
 }
 
+.youtubevideo{
+  height: 567px;
+  width: 1000px;
+
+}
+@media (max-width: 1180px) {
+  .youtubevideo{
+    height: 400px;
+    width: 700px;
+    
+  }
+}
+
 @media (max-width: 690px) {
   .svg-section {
     display: flex;
@@ -55,6 +68,11 @@
     align-items: center;
     width: 100%;
     margin: 0;
+  }
+  .youtubevideo{
+    height: 300px;
+    width: 500px;
+    
   }
   .credit {
     width: 200px;
@@ -69,5 +87,12 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 690px) {
+  .youtubevideo{
+    height: 150px;
+    width: 300px;
+    
   }
 }
